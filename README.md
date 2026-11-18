@@ -2,7 +2,7 @@
 
 A Power Apps canvas app with SharePoint Online lists that tracks locker allotment and release at a co-operative credit society branch, replacing the physical register.
 
-📌 Problem
+ 📌 Problem
 
 Staff had to check a paper register every time a customer asked about a locker. This was slow, error-prone, and gave no history or search.
 
@@ -16,33 +16,51 @@ Staff had to check a paper register every time a customer asked about a locker. 
 - Login with lockout after 5 wrong attempts
 - Responsive layout for mobile and desktop
 
-🖼️ Screenshots
+ 🗓️ Project Timeline
+
+| Item | Details |
+|---|---|
+| Development started | Sep 2026 |
+| Time spent so far | ~2 months (requirement gathering, design, development and testing) |
+| Go-live at branch | 30 Nov 2026 |
+| Current version | v1.0 |
+| Status | 🟡 Almost complete, final testing before go-live |
+
+ Milestones
+
+- Sep 2026: Requirement gathering (how the paper register is used, what details are recorded)
+- Sep–Oct 2026: Designed the app and SharePoint lists, built the locker grid with allot and release
+- Oct–Nov 2026: Added the searchable register with filters, print report and mobile layout
+- Nov 2026: Testing with sample data, added "Are you sure?" confirmation before releasing a locker
+- 30 Nov 2026: Planned go-live at the branch
+
+ 🖼️ Screenshots
 
 > All screenshots use test data only.
 
  Login
 ![Login](01-login.png)
 
-Locker grid
+ Locker grid
 ![Locker grid](02-locker-grid.png)
 
-Allot a locker
+ Allot a locker
 ![Allot locker](03-allot-locker.png)
 
-Release a locker
+ Release a locker
 ![Release locker](05-RELESE.png)
 
-Register and filters
+ Register and filters
 ![Register report](04-register-report.png)
 
-Print report
+ Print report
 ![Print report](05-print-report.png)
 
  🧰 Tech stack
 
 Power Apps (Canvas) · SharePoint Online · Power Fx · SVG-generated locker tiles
 
-🗂️ Data model
+ 🗂️ Data model
 
 LockerEntries
 
@@ -68,7 +86,7 @@ LockerUsers: user ID, full name, active flag, login credentials
 
  📈 Impact
 
-Built and used at the  Branch,  Multistate Credit Co-op Society, Nanded. Staff now check locker availability in seconds instead of searching the paper register.
+Built over about 2 months for a co-operative credit society branch, from requirement gathering to final testing. Go-live is planned for 30 Nov 2026. Once live, staff can check locker availability in seconds instead of searching the paper register.
 
  🚀 Planned improvements
 
