@@ -1,41 +1,83 @@
-# 🔐 Locker Register – Branch Locker Allotment Tracker
+ 🔐 Locker Register – Branch Locker Allotment Tracker
 
-A Power Apps canvas app with SharePoint Online lists to track locker allotment and release at a co-operative credit society branch, replacing the physical register.
+A Power Apps canvas app with SharePoint Online lists that tracks locker allotment and release at a co-operative credit society branch, replacing the physical register.
 
- Problem
-Staff checked a paper register every time a customer asked about a locker. This was slow, error-prone and had no history or search.
+📌 Problem
 
-Solution
-- Visual grid of 36 lockers per set (2 sets), green = free, red = allotted
-- Allot a locker: operator name, officer, date/time, page no., remarks
-- Release a locker with a confirmation step and release remark
+Staff had to check a paper register every time a customer asked about a locker. This was slow, error-prone, and gave no history or search.
+
+ ✅ Solution
+
+- Visual grid of lockers in 2 sets (green = free, red = allotted)
+- Allot a locker: operator name, officer, date/time, register page no., remarks
+- Release a locker with an "Are you sure?" confirmation and release remark
 - Searchable register with filters (set, size, status, date range)
-- Print / save-as-PDF report
+- Print / Save as PDF report
 - Login with lockout after 5 wrong attempts
-- Works on mobile and desktop (responsive layout)
+- Responsive layout for mobile and desktop
 
-Tech stack
-Power Apps (Canvas) · SharePoint Online lists · Power Fx · SVG-generated tiles
+🖼️ Screenshots
 
-Screenshots
-| Locker grid | Allot | Register |
-|---|---|---|
-| ![](Screenshots/02-locker-grid.png) | ![](Screenshots/03-allot-locker.png) | ![](Screenshots/04-register-report.png) |
+> All screenshots use test data only.
 
- Data model
-- **LockerEntries**: Title, LockerSet, LockerNo, KeyNo, PageNo, Officer, AllotAt, Remark, ReleasedAt, RelRemark, IsActive
-- **LockerUsers**: Title (User ID), FullName, Password, IsActive
+ Login
+![Login](01-login.png)
 
-How to run
+Locker grid
+![Locker grid](02-locker-grid.png)
+
+Allot a locker
+![Allot locker](03-allot-locker.png)
+
+Release a locker
+![Release locker](05-RELESE.png)
+
+Register and filters
+![Register report](04-register-report.png)
+
+Print report
+![Print report](05-print-report.png)
+
+ 🧰 Tech stack
+
+Power Apps (Canvas) · SharePoint Online · Power Fx · SVG-generated locker tiles
+
+🗂️ Data model
+
+LockerEntries
+
+| Column | Purpose |
+|---|---|
+| Title | Operator name(s) |
+| LockerSet, LockerNo | Which locker |
+| KeyNo | Key number |
+| PageNo | Physical register page reference |
+| Officer | Officer who allotted |
+| AllotAt | Allotment date and time |
+| Remark | Allotment remark |
+| ReleasedAt, RelRemark | Release date and remark |
+| IsActive | true = currently allotted |
+
+LockerUsers: user ID, full name, active flag, login credentials
+
+ ▶️ How to run
+
 1. Create the two SharePoint lists above.
-2. In Power Apps, import `App/Locker_Register.msapp`.
-3. Reconnect the data sources to your lists.
+2. In Power Apps, go to Apps → Import canvas app and upload `Locker_Register.msapp`.
+3. Reconnect the data sources to your own lists.
 
-Impact
-Built and used at the Seloo Branch, Godavari Urban Multistate Credit Co-op Society, Nanded.
+ 📈 Impact
 
-Planned improvements
-Audit trail (allotted/released by), Microsoft 365 sign-in instead of passwords, delegable register filters, gallery-based tiles.
+Built and used at the Seloo Branch, Godavari Urban Multistate Credit Co-op Society, Nanded. Staff now check locker availability in seconds instead of searching the paper register.
 
-Author
-Akash Ravi Sontakke – [GitHub](https://github.com/aakashsontakke456-pixel)
+ 🚀 Planned improvements
+
+- Audit trail (allotted-by / released-by) saved with each entry
+- Microsoft 365 sign-in instead of an in-app login
+- Delegation-safe register filters for large history
+- Gallery-based locker tiles to reduce app size
+
+ 👤 Author
+
+Akash Ravi Sontakke
+[GitHub](https://github.com/aakashsontakke456-pixel)
