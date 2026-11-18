@@ -68,7 +68,7 @@ LockerUsers: user ID, full name, active flag, login credentials
 
  📈 Impact
 
-Built and used at the Seloo Branch, Godavari Urban Multistate Credit Co-op Society, Nanded. Staff now check locker availability in seconds instead of searching the paper register.
+Built and used at the  Branch,  Multistate Credit Co-op Society, Nanded. Staff now check locker availability in seconds instead of searching the paper register.
 
  🚀 Planned improvements
 
